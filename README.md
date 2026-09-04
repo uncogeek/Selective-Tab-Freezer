@@ -15,15 +15,6 @@ This extension discards only tabs whose URL contains one of your saved URLs or p
 - URL fields remain LTR in both languages.
 - Version 1.0 settings are migrated automatically.
 
-## Vazirmatn fonts
-
-Place the files at these exact paths:
-
-```text
-Selective-Tab-Freezer/fonts/Vazirmatn-Regular.woff2
-Selective-Tab-Freezer/fonts/Vazirmatn-Bold.woff2
-```
-
 Reload the extension from `chrome://extensions` after adding them. Tahoma and Arial are used as fallbacks when the font files are absent.
 
 Chrome cannot discard an active tab. Switch to a non-target tab before running Freeze if a target tab is active.
