@@ -33,14 +33,7 @@
 
 زبان پیش‌فرض فارسی است. از تنظیمات می‌توان English را انتخاب کرد؛ کل Popup و تنظیمات LTR می‌شوند. URLها در هر دو زبان همیشه LTR باقی می‌مانند.
 
-## فونت Vazirmatn
 
-دو فایل زیر را دقیقاً در پوشه `Selective-Tab-Freezer/fonts/` قرار دهید:
-
-```text
-Selective-Tab-Freezer/fonts/Vazirmatn-Regular.woff2
-Selective-Tab-Freezer/fonts/Vazirmatn-Bold.woff2
-```
 
 فایل راهنما با نام `PUT-FONTS-HERE.txt` از قبل داخل همین پوشه قرار دارد. اگر فونت‌ها موجود نباشند، رابط موقتاً از Tahoma یا Arial استفاده می‌کند.
 
