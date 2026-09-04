@@ -1,0 +1,178 @@
+:root {
+  color-scheme: light dark;
+  --bg: #0b1120;
+  --panel: #111827;
+  --border: #334155;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --primary: #2563eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 410px;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+main {
+  padding: 16px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 14px;
+}
+
+.mark {
+  display: grid;
+  flex: 0 0 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  font-size: 23px;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 3px;
+  font-size: 17px;
+  direction: ltr;
+}
+
+header p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.current-card {
+  display: grid;
+  gap: 8px;
+  padding: 13px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--panel);
+}
+
+label {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.current-url {
+  max-height: 58px;
+  overflow: auto;
+  padding: 9px;
+  border-radius: 8px;
+  background: #020617;
+  color: #93c5fd;
+  font: 12px/1.55 Consolas, "Courier New", monospace;
+  direction: ltr;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+input,
+button {
+  width: 100%;
+  padding: 9px 11px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #1e293b;
+  color: var(--text);
+  font: inherit;
+}
+
+input {
+  outline: none;
+  background: #0f172a;
+}
+
+input:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.14);
+}
+
+button {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #334155;
+}
+
+button.primary,
+.freeze-button {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: white;
+}
+
+button.primary:hover,
+.freeze-button:hover {
+  background: #1d4ed8;
+}
+
+.freeze-button {
+  margin-top: 11px;
+  padding-block: 11px;
+}
+
+.link-button {
+  margin-top: 8px;
+  border-color: transparent;
+  background: transparent;
+  color: #93c5fd;
+}
+
+#status {
+  display: block;
+  min-height: 22px;
+  margin-top: 8px;
+  color: #7dd3fc;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+#status.error {
+  color: #fca5a5;
+}
+
+button:disabled,
+input:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f1f5f9;
+    --panel: #ffffff;
+    --border: #cbd5e1;
+    --text: #0f172a;
+    --muted: #64748b;
+  }
+
+  .current-url,
+  input {
+    background: #f8fafc;
+  }
+
+  button {
+    background: #e2e8f0;
+  }
+}

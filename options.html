@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Selective Tab Freezer</title>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="mark" aria-hidden="true">❄</div>
+          <div>
+            <h1>Selective Tab Freezer</h1>
+            <p data-i18n="optionsSubtitle"></p>
+          </div>
+        </div>
+
+        <label class="language-control" for="language">
+          <span data-i18n="language"></span>
+          <select id="language">
+            <option value="fa" data-i18n="persian"></option>
+            <option value="en" data-i18n="english"></option>
+          </select>
+        </label>
+      </header>
+
+      <section class="toolbar">
+        <div class="search-wrap">
+          <span aria-hidden="true">⌕</span>
+          <input id="search" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder">
+        </div>
+
+        <div class="toolbar-actions">
+          <button id="add-list" type="button" class="primary" data-i18n="addFromList"></button>
+          <button id="import-file" type="button" data-i18n="importFile"></button>
+          <button id="export-list" type="button" data-i18n="exportList"></button>
+          <input id="file-input" type="file" accept=".json,.txt" hidden>
+        </div>
+      </section>
+
+      <section class="table-card">
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th class="number-column" data-i18n="row"></th>
+                <th data-i18n="url"></th>
+                <th data-i18n="comment"></th>
+                <th class="actions-column" data-i18n="actions"></th>
+              </tr>
+            </thead>
+            <tbody id="sites-body"></tbody>
+          </table>
+          <div id="empty-state" class="empty-state" hidden></div>
+        </div>
+
+        <footer class="table-footer">
+          <span id="site-count"></span>
+          <output id="status" aria-live="polite"></output>
+        </footer>
+      </section>
+    </main>
+
+    <div id="bulk-modal" class="modal" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="bulk-title">
+        <header>
+          <div>
+            <h2 id="bulk-title" data-i18n="bulkTitle"></h2>
+            <p data-i18n="bulkHelp"></p>
+          </div>
+          <button type="button" class="icon-button" data-close-modal aria-label="Close">×</button>
+        </header>
+        <textarea id="bulk-text" rows="10" spellcheck="false" data-i18n-placeholder="bulkPlaceholder"></textarea>
+        <footer>
+          <button id="bulk-cancel" type="button" data-i18n="cancel"></button>
+          <button id="bulk-import" type="button" class="primary" data-i18n="addItems"></button>
+        </footer>
+      </section>
+    </div>
+
+    <script src="core.js"></script>
+    <script src="i18n.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>
