@@ -6,6 +6,8 @@ This extension discards only tabs whose URL contains one of your saved URLs or p
 
 ![Screenshot](https://github.com/uncogeek/Selective-Tab-Freezer/blob/main/screenshot/screenshot.png?raw=true)
 
+Free up RAM the same way Chrome's own Memory Saver does — but only for the tabs you choose, so the sites you always want active stay untouched.
+
 ## Main features
 - Clicking the toolbar icon opens a popup; it no longer freezes immediately.
 - Add the current tab's full URL with an optional comment.
@@ -19,5 +21,3 @@ This extension discards only tabs whose URL contains one of your saved URLs or p
 - Version 1.0 settings are migrated automatically.
 Reload the extension from `chrome://extensions` after adding them. Tahoma and Arial are used as fallbacks when the font files are absent.
 Chrome cannot discard an active tab. Switch to a non-target tab before running Freeze if a target tab is active.
-
-Note: I added `?raw=true` to the URL so GitHub renders the actual image instead of the blob viewer page — worth double-checking it displays correctly on your repo page.
