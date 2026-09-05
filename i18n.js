@@ -25,7 +25,7 @@
       visibleCount: "نمایش {visible} از {total} سایت",
       bulkTitle: "افزودن از لیست",
       bulkHelp: "در هر خط یک URL کامل یا بخشی از URL را وارد کنید.",
-      bulkPlaceholder: "https://www.tradingview.com/chart/0sdfsdfQz/\n0K5ttewrt",
+      bulkPlaceholder: "https://www.tradingview.com/chart/3dfsdfQz/\n0K4ttewrt",
       addItems: "افزودن به فهرست",
       urlRequired: "حداقل یک URL یا عبارت معتبر وارد کنید.",
       duplicateSite: "این URL از قبل در فهرست وجود دارد.",
