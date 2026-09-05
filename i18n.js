@@ -42,7 +42,7 @@
       optionalComment: "نام یا توضیح اختیاری",
       optionalCommentPlaceholder: "مثلاً: چارت اصلی EURUSD",
       addCurrent: "افزودن تب فعلی",
-      freezeSaved: "Freeze تب‌های فهرست",
+      freezeSaved: "❄️Freeze کن",
       openSettings: "مدیریت فهرست و تنظیمات",
       loading: "در حال خواندن تب فعلی...",
       currentUnavailable: "URL تب فعلی قابل خواندن نیست.",

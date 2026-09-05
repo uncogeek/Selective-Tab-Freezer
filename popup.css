@@ -36,7 +36,7 @@ header {
   height: 40px;
   place-items: center;
   border-radius: 10px;
-  background: var(--primary);
+ /* background: var(--primary);*/
   color: white;
   font-size: 23px;
 }
