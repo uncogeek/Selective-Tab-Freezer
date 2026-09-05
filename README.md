@@ -6,6 +6,8 @@ This extension discards only tabs whose URL contains one of your saved URLs or p
 
 ![Screenshot](https://github.com/uncogeek/Selective-Tab-Freezer/blob/main/screenshot/screenshot.png?raw=true)
 
+![Screenshot](https://github.com/uncogeek/Selective-Tab-Freezer/blob/main/screenshot/Screenshot2.png?raw=true)
+
 Free up RAM the same way Chrome's own Memory Saver does — but only for the tabs you choose, so the sites you always want active stay untouched.
 
 ## Main features
