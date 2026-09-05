@@ -41,7 +41,7 @@
       currentTab: "تب فعلی",
       optionalComment: "نام یا توضیح اختیاری",
       optionalCommentPlaceholder: "مثلاً: چارت اصلی EURUSD",
-      addCurrent: "افزودن تب فعلی",
+      addCurrent: "افزودن تب به لیست",
       freezeSaved: "❄️Freeze کن",
       openSettings: "مدیریت فهرست و تنظیمات",
       loading: "در حال خواندن تب فعلی...",
@@ -102,10 +102,10 @@
     }
   };
 
-  let currentLanguage = "fa";
+  let currentLanguage = "en";
 
   function t(key, values = {}) {
-    const template = messages[currentLanguage]?.[key] || messages.fa[key] || key;
+    const template = messages[currentLanguage]?.[key] || messages.en[key] || key;
     return Object.entries(values).reduce(
       (text, [name, value]) => text.replaceAll(`{${name}}`, String(value)),
       template
@@ -113,7 +113,7 @@
   }
 
   function apply(language, container = document) {
-    currentLanguage = language === "en" ? "en" : "fa";
+    currentLanguage = language === "fa" ? "fa" : "en";
     document.documentElement.lang = currentLanguage;
     document.documentElement.dir = currentLanguage === "en" ? "ltr" : "rtl";
 
@@ -122,6 +122,9 @@
     });
     container.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
       element.placeholder = t(element.dataset.i18nPlaceholder);
+    });
+    container.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+      element.setAttribute("aria-label", t(element.dataset.i18nAriaLabel));
     });
 
     return currentLanguage;

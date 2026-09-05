@@ -295,10 +295,10 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-chrome.storage.local.get({ [SITES_KEY]: null, [LEGACY_KEY]: "", [LANGUAGE_KEY]: "fa" })
+chrome.storage.local.get({ [SITES_KEY]: null, [LEGACY_KEY]: "", [LANGUAGE_KEY]: "en" })
   .then(async (stored) => {
     sites = TabFreezerCore.sitesFromStorage(stored);
-    elements.language.value = stored[LANGUAGE_KEY] === "en" ? "en" : "fa";
+    elements.language.value = stored[LANGUAGE_KEY] === "fa" ? "fa" : "en";
     TabFreezerI18n.apply(elements.language.value);
 
     if (!Array.isArray(stored[SITES_KEY]) && sites.length > 0) {

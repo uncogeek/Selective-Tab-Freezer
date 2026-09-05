@@ -74,7 +74,7 @@ freezeButton.addEventListener("click", () => {
 settingsButton.addEventListener("click", () => chrome.runtime.openOptionsPage());
 
 Promise.all([
-  chrome.storage.local.get({ [LANGUAGE_KEY]: "fa" }),
+  chrome.storage.local.get({ [LANGUAGE_KEY]: "en" }),
   chrome.tabs.query({ active: true, currentWindow: true })
 ]).then(([stored, tabs]) => {
   TabFreezerI18n.apply(stored[LANGUAGE_KEY]);
@@ -89,7 +89,7 @@ Promise.all([
     commentInput.disabled = true;
   }
 }).catch(() => {
-  TabFreezerI18n.apply("fa");
+  TabFreezerI18n.apply("en");
   currentUrl.textContent = TabFreezerI18n.t("currentUnavailable");
   addButton.disabled = true;
 });

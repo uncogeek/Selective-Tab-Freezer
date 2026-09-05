@@ -57,6 +57,24 @@ header p {
   font-size: 12px;
 }
 
+.icon-button {
+  width: auto;
+  flex: 0 0 auto;
+  margin-inline-start: auto;
+  padding: 7px;
+  border-color: transparent;
+  background: transparent;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.icon-button:hover {
+  border-color: var(--border);
+  background: #1e293b;
+  color: var(--text);
+}
+
 .current-card {
   display: grid;
   gap: 8px;
@@ -96,6 +114,22 @@ button {
   font: inherit;
 }
 
+.comment-row {
+  display: flex;
+  gap: 8px;
+}
+
+.comment-row input {
+  flex: 2 1 0;
+  width: auto;
+  min-width: 0;
+}
+
+.comment-row button {
+  flex: 1 1 0;
+  width: auto;
+}
+
 input {
   outline: none;
   background: #0f172a;
@@ -128,8 +162,88 @@ button.primary:hover,
 }
 
 .freeze-button {
-  margin-top: 11px;
-  padding-block: 11px;
+  position: relative;
+  margin-top: 14px;
+  padding-block: 13px;
+  overflow: hidden;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb 55%, #1d4ed8);
+  background-size: 160% 160%;
+  color: white;
+  font-size: 13.5px;
+  letter-spacing: 0.2px;
+  isolation: isolate;
+  transition: transform 0.15s ease, box-shadow 0.25s ease;
+  animation: freeze-glow-pulse 2.6s ease-in-out infinite,
+    freeze-gradient-drift 6s ease-in-out infinite;
+}
+
+.freeze-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.28) 45%,
+    rgba(255, 255, 255, 0.55) 50%,
+    rgba(255, 255, 255, 0.28) 55%,
+    transparent 100%
+  );
+  transform: skewX(-18deg);
+  animation: freeze-shine-sweep 3.2s ease-in-out infinite;
+  animation-delay: 1s;
+  pointer-events: none;
+}
+
+.freeze-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px -4px rgba(37, 99, 235, 0.5);
+}
+
+.freeze-button:active {
+  transform: translateY(0);
+}
+
+@keyframes freeze-glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.5), 0 2px 8px -2px rgba(37, 99, 235, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 7px rgba(37, 99, 235, 0), 0 4px 20px 2px rgba(37, 99, 235, 0.6);
+  }
+}
+
+@keyframes freeze-gradient-drift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes freeze-shine-sweep {
+  0% {
+    left: -60%;
+  }
+  45%, 100% {
+    left: 140%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .freeze-button {
+    animation: none;
+  }
+  .freeze-button::after {
+    animation: none;
+    display: none;
+  }
 }
 
 .link-button {
@@ -174,5 +288,9 @@ input:disabled {
 
   button {
     background: #e2e8f0;
+  }
+
+  .icon-button {
+    background: transparent;
   }
 }
